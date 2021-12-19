@@ -13,3 +13,6 @@ This is benchmark program written in Java that can benchmark CPU, Memory and dis
 # Requirements
 * Windows 10+ (To execute Benchmark.jar)
 * Java 16+ https://www.oracle.com/java/technologies/downloads/
+
+# License
+Do What The F*ck You Want To Public License (WTFPL)
