@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cn210.benchmark.page.AboutController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false">
+              <graphic>
+                  <Label text="Home" onMouseClicked="#onHomeButtonClick"/>
+              </graphic>
+          </Menu>
+            <Menu mnemonicParsing="false">
+                <graphic>
+                    <Label onMouseClicked="#onSystemButtonClick" text="System" />
+                </graphic>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#onAboutButtonClick" text="About" />
+                <MenuItem mnemonicParsing="false" onAction="#onSRCButtonClick" text="Source Code" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox alignment="CENTER" prefHeight="375.0" prefWidth="600.0">
+         <children>
+            <Label text="About This Benchmark">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="This benchmark program is a part of CN210 final project to benchmark&#10;about CPU, memory and harddisk." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label text="Contributors">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <Label text="1. Artitaya Khaudsri 6310742017&#10;2. Ponlapat Ittiratchapong 6310742181&#10;3. Kullataya Netmugda 6310742413&#10;4. Teerat Luangnalapee 6310742603&#10;5. Patipat Sunthornrak 6310742611&#10;6. Pukkanun Sombutthai 6310742843">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>

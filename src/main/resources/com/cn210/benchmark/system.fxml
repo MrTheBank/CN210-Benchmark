@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cn210.benchmark.page.SystemController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false">
+                    <graphic>
+                        <Label onMouseClicked="#onHomeButtonClick" text="Home" />
+                    </graphic>
+                </Menu>
+                <Menu mnemonicParsing="false">
+                    <graphic>
+                        <Label onMouseClicked="#onSystemButtonClick" text="System" />
+                    </graphic>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onAboutButtonClick" text="About" />
+                        <MenuItem mnemonicParsing="false" onAction="#onSRCButtonClick" text="Source Code" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <VBox prefHeight="375.0" prefWidth="600.0">
+         <children>
+            <Label text="System Information">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin></Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="500.0">
+                     <children>
+                        <HBox prefHeight="60.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Operation System: ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="OSName" text="OS.NAME">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                         <HBox prefHeight="60.0" prefWidth="200.0">
+                             <children>
+                                 <Label text="CPU Architecture:">
+                                     <font>
+                                         <Font name="System Bold" size="18.0" />
+                                     </font>
+                                     <padding>
+                                         <Insets left="10.0" />
+                                     </padding>
+                                 </Label>
+                                 <Label fx:id="OSArch" text="OS.ARCH">
+                                     <font>
+                                         <Font size="18.0" />
+                                     </font>
+                                     <HBox.margin>
+                                         <Insets left="17.0" />
+                                     </HBox.margin>
+                                 </Label>
+                             </children>
+                         </HBox>
+                        <HBox prefHeight="60.0" prefWidth="200.0">
+                           <children>
+                              <Label text="CPU Core:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="AVAProcesssors" text="AVA_PROCESSSORS">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="82.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                         <HBox prefHeight="60.0" prefWidth="200.0">
+                             <children>
+                                 <Label text="RAM:">
+                                     <font>
+                                         <Font name="System Bold" size="18.0" />
+                                     </font>
+                                     <padding>
+                                         <Insets left="10.0" />
+                                     </padding>
+                                 </Label>
+                                 <Label fx:id="TotalRAM" text="TOTAL_RAM">
+                                     <font>
+                                         <Font size="18.0" />
+                                     </font>
+                                     <HBox.margin>
+                                         <Insets left="120.0" />
+                                     </HBox.margin>
+                                 </Label>
+                             </children>
+                         </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="OSNameImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin></ImageView>
+               </children>
+            </HBox>
+            <Label text="JVM Information">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="600.0">
+                     <children>
+                        <Label text="Java Version:">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="JavaVersion" text="JAVA.VERSION">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+
+                   <HBox prefHeight="30.0" prefWidth="600.0">
+                       <children>
+                           <Label text="Java Path:">
+                               <font>
+                                   <Font name="System Bold" size="18.0" />
+                               </font>
+                               <padding>
+                                   <Insets left="10.0" />
+                               </padding>
+                           </Label>
+                           <Label fx:id="JVMPath" text="JVM.PATH">
+                               <font>
+                                   <Font size="18.0" />
+                               </font>
+                               <HBox.margin>
+                                   <Insets left="46.0" />
+                               </HBox.margin>
+                           </Label>
+                       </children>
+                   </HBox>
+
+                   <HBox prefHeight="30.0" prefWidth="600.0">
+                       <children>
+                           <Label text="Java Memory:">
+                               <font>
+                                   <Font name="System Bold" size="18.0" />
+                               </font>
+                               <padding>
+                                   <Insets left="10.0" />
+                               </padding>
+                           </Label>
+                           <Label fx:id="JVMMem" text="JVM.MEM">
+                               <font>
+                                   <Font size="18.0" />
+                               </font>
+                               <HBox.margin>
+                                   <Insets left="13.0" />
+                               </HBox.margin>
+                           </Label>
+                       </children>
+                   </HBox>
+               </children>
+            </VBox>
+         </children></VBox>
+    </children>
+</VBox>
